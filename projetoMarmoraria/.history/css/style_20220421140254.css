@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@1,500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+/*----------------------------------MENU-BAR----------------------------------*/
+a {
+  color: rgb(37, 37, 37);
+  text-decoration: none;
+  transition: 0.8s;
+}
+
+a:hover {
+  color: blue;
+  opacity: 0.7;
+}
+
+.logo {
+  font-size: 1.5em;
+  text-transform: uppercase;
+  color: rgb(26, 26, 26);
+}
+
+#decore {
+  font-family: 'Barlow', sans-serif;
+  color: #6817ff;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  background: #ededed;
+  height: 10vh;
+}
+
+
+.nav-list {
+  list-style: none;
+  display: flex;
+}
+
+.nav-list li {
+  letter-spacing: 3px;
+  margin-left: 32px;
+}
+
+.mobile-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.mobile-menu div {
+  width: 32px;
+  height: 2px;
+  background: rgb(20, 24, 255);
+  margin: 8px;
+  transition: 0.3s;
+}
+
+@media (max-width: 999px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .logo {
+    font-size: 1.8rem;
+  }
+
+  .nav-list {
+    overflow-x: hidden;
+    position: fixed;
+    top: 10vh;
+    right: 0;
+    width: 50vw;
+    height: 40vh;
+    background: #ededed;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+  }
+  .nav-list li {
+    margin-left: 0;
+    opacity: 0;
+  }
+  .mobile-menu {
+    display: block;
+  }
+}
+
+.nav-list.active {
+  transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.mobile-menu.active .line1 {
+  transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+  opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+  transform: rotate(45deg) translate(-5px, -7px);
+}
+
+/*------------------------------IMAGEM DO HEADER------------------------------*/
+.hero-section {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.516),rgba(0, 0, 0, 0.516)), url(../img/img-header.jpg);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh;
+  text-align: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#titulo-header {
+  font-size: 2.3rem;
+}
+
+#paragrafo-header {
+  font-size: 0.8rem;
+}
+
+.hero-section .hero-section-text {
+  color: #fefefe;
+  text-shadow: 1px 1px 2px #0a0a0a;
+}
+
+/*------------------------------Slider de imagens------------------------------*/
+
+main {
+  margin: 0;
+  padding: 0;
+  height: 150vh;
+  width: 100%;
+  position: absolute;
+}
+
+.section-a {
+  height: 100vh;
+  background-color: ;
+}
+
+.content { 
+  height: 520px;
+  width: 935px;
+  border-radius: 20px;
+  overflow: hidden; /* Serve para esconder os conteúdos que estavam ultrapassando a div */
+  position: absolute; /* Para descentralizar o Content, ou seja, serve para posicionar o elemento na tela onde se quer. */
+  /* A posição que quero é no centro. Por isso, uso (top, left e transform: */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Translete move o elemento em seu próprio eixo. */
+}
+
+.navigation {
+  position: absolute; /* Só dá pra mover dentro da Div Pai */
+  bottom: 20px; /* Bottom é em baixo, ou seja, aqui se quer 20px acima do bottom */
+  left: 50%;
+  transform: translate(-50%);
+  display: flex; /* Para os elementos ficarem um ao lado do outro, e não um em cima do outro */    
+}
+
+.bar {
+  width: 70px;
+  height: 17px;
+  border: 2px solid rgb(255, 255, 255);
+  margin: 6px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: .4s; /* É o tempo em que o hover vai ser aplicado. */
+}
+
+.bar:hover {
+  background: #fff;
+}
+
+input {
+  display: none;
+}
+
+.slides {
+  display: flex;
+  width: 500%; /* Se fosse 100%, as 5 imagens apareceriam de uma só vez. Já os 500%, fará com que uma imagem apareça de cada vez. */
+  height: 100%;
+}
+
+.slide {
+  width: 20%; /* Para que todas as imagens tenham o mesmo tamanho, ou seja, como são 5 imagens, então fica 5 / 100% (da div pai) = 20% */
+  transition: .6s;
+}
+
+.slide img {
+  /* Para não cortar a imagem e aparecer inteira */
+  width: 100%;
+  height: 100%;
+}
+
+#slide1:checked ~ .s1 {
+  margin-left: 0;
+}
+
+#slide2:checked ~ .s1 {
+  margin-left: -20%;
+}
+
+#slide3:checked ~ .s1 {
+  margin-left: -40%;
+}
+
+#slide4:checked ~ .s1 {
+  margin-left: -60%;
+}
+
+#slide5:checked ~ .s1 {
+  margin-left: -80%;
+}
