@@ -526,9 +526,4 @@ footer {}
     flex-direction: column;
   }
 
-  .block-footer-up {
-    padding: 10px;
-    margin: 10px auto;
-  }
-
 }

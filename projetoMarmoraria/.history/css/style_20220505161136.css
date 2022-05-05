@@ -523,12 +523,13 @@ footer {}
 
 @media (max-width: 999px) {
   .footer-up {
-    flex-direction: column;
-  }
+    background-color: #161616;
+    height: 98%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
 
-  .block-footer-up {
-    padding: 10px;
-    margin: 10px auto;
   }
 
 }
