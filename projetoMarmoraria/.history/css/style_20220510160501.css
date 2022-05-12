@@ -413,8 +413,6 @@ main {
   background-position: bottom center;
   background-repeat: no-repeat;
   background-size: cover;
-  border: 3px solid white;
-
 }
 
 #card-img-5 {
@@ -423,8 +421,6 @@ main {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  border: 3px solid white;
-
 }
 
 #card-img-6 {
@@ -433,8 +429,6 @@ main {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  border: 3px solid white;
-
 }
 
 @media (max-width: 999px) {
