@@ -1,0 +1,3 @@
+getPosition = () => {
+  var posi
+}

@@ -1,0 +1,3 @@
+getP = () => {
+  console.log('teste');
+}

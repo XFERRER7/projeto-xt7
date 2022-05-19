@@ -1,0 +1,3 @@
+getPosition = () => {
+  console.log('teste');
+}

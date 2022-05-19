@@ -1,0 +1,3 @@
+getPosition = () => {
+  var elemento = docume
+}
