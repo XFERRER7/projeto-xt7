@@ -901,7 +901,7 @@ footer {
   justify-content: center;
   flex-direction: column;
   background-color: #202020;
-  width:33.33%;
+  width: ;
   padding: 30px;
   font-size: 0.9rem;
   gap: 10px;
@@ -929,10 +929,6 @@ footer {
   .historia {
     width: 80%;
     margin-bottom: 30px;
-  }
-  
-  .box-content {
-    width: auto;
   }
 
 }
