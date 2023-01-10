@@ -1,0 +1,66 @@
+function openModal(modalId) {
+
+  const modal = document.getElementById(modalId);
+
+  modal.classList.add('mostrar');
+
+  modal.addEventListener('click', (e) => {
+
+
+    if (e.target.id == modalId || e.target.className == 'fechar') {
+      modal.classList.remove('mostrar');
+    }
+  })
+
+}
+
+
+
+
+function getClick() {
+  document.querySelectorAll('div.item-catalogo').forEach(function (elemento) {
+    elemento.addEventListener('click', (e) => {
+      const el = e.target.id;
+      if(el == 'superficie' || el == 'superficie-title') {
+        openModal('superficie-info')
+      }
+      else if(el == 'ardosia' || el == 'ardosia-title') {
+        openModal('ardosia-info')
+      }
+      else if(el == 'granito' || el == 'granito-title') {
+        openModal('granito-info')
+      }
+      else if(el == 'marmoglass' || el == 'marmoglass-title') {
+        openModal('marmoglass-info')
+      }
+      else if(el == 'marmore' || el == 'marmore-title') {
+        openModal('marmore-info')
+      }
+      else if(el == 'nanoglass' || el == 'nanoglass-title') {
+        openModal('nanoglass-info')
+      }
+      else if(el == 'onyx' || el == 'onyx-title') {
+        openModal('onyx-info')
+      }
+      else if(el == 'prime' || el == 'prime-title') {
+        openModal('prime-info')
+      }
+      else if(el == 'quartzito' || el == 'quartzito-title') {
+        openModal('quartzito-info')
+      }
+      else if(el == 'quartzo' || el == 'quartzo-title') {
+        openModal('quartzo-info')
+      }
+      else if(el == 'supernanoglass' || el == 'supernanoglass-title') {
+        openModal('supernanoglass-info')
+      }
+      else if(el == 'travertino' || el == 'travertino-title') {
+        openModal('travertino-info')
+      }
+      
+    })
+  })
+}
+
+getClick();
+
